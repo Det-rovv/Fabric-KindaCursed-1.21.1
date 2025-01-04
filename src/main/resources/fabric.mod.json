@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "kindacursed",
+	"version": "${version}",
+	"name": "Kinda Cursed",
+	"description": "A mod that adds new curses to the game",
+	"authors": [
+		"Detrovv"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/kindacursed/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.detrovv.kindacursed.KindaCursed"
+		],
+		"fabric-datagen": [
+			"net.detrovv.kindacursed.KindaCursedDataGenerator"
+		],
+		"client": [
+			"net.detrovv.kindacursed.KindaCursedClient"
+		]
+	},
+	"mixins": [
+		"kindacursed.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

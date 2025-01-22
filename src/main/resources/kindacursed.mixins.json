@@ -3,7 +3,7 @@
 	"package": "net.detrovv.kindacursed.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"InventoryEnchantmentTickMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

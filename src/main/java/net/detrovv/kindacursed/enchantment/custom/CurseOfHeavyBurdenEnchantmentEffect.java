@@ -1,7 +1,9 @@
 package net.detrovv.kindacursed.enchantment.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.detrovv.kindacursed.KindaCursed;
 import net.detrovv.kindacursed.component.ModDataComponentTypes;
+import net.detrovv.kindacursed.mixin.ServerPlayerEntityFieldAccessor;
 import net.minecraft.enchantment.EnchantmentEffectContext;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.entity.Entity;
@@ -17,8 +19,9 @@ public record CurseOfHeavyBurdenEnchantmentEffect() implements EnchantmentEntity
 {
     public static final MapCodec<CurseOfHeavyBurdenEnchantmentEffect> CODEC =
             MapCodec.unit(CurseOfHeavyBurdenEnchantmentEffect::new);
-    public static final double DOWNWARD_PULL_VELOCITY_PER_TICK = 0.05;
+    public static final double DOWNWARD_PULL_VELOCITY_PER_TICK = 0.08;
     public static final double CURSE_ACTIVATION_PROBABILITY = 0.0025;
+    private static final int JOIN_INVULNERABILITY_TICKS_DEFAULT_VALUE = 60;
     private static final Random RANDOM = new Random();
 
     @Override
@@ -29,7 +32,7 @@ public record CurseOfHeavyBurdenEnchantmentEffect() implements EnchantmentEntity
             ItemStack itemStack = context.stack();
             boolean curseActive = getCurseActivation(itemStack);
 
-            if (curseActive)
+            if (curseActive && notFirstTwoTicksAfterJoin(user))
             {
                 if (user.isInFluid())
                 {
@@ -39,6 +42,12 @@ public record CurseOfHeavyBurdenEnchantmentEffect() implements EnchantmentEntity
             }
             else tryToActivateCurse(user, itemStack);
         }
+    }
+
+    private static boolean notFirstTwoTicksAfterJoin(Entity user)
+    {
+        return user instanceof ServerPlayerEntityFieldAccessor accessor &&
+                accessor.getJoinInvulnerabilityTicks() < (JOIN_INVULNERABILITY_TICKS_DEFAULT_VALUE - 1);
     }
 
     private static boolean getCurseActivation(ItemStack stack)

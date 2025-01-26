@@ -1,11 +1,11 @@
 package net.detrovv.kindacursed.mixin;
 
 import com.mojang.authlib.GameProfile;
+import net.detrovv.kindacursed.util.EnchantmentUtil;
 import net.detrovv.kindacursed.util.ModTags;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentEffectContext;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -29,34 +29,29 @@ public abstract class InventoryEnchantmentTickMixin extends PlayerEntity
 	@Inject(at = @At("TAIL"), method = "tick")
 	private void tick(CallbackInfo info)
 	{
-		ServerWorld serverWorld = (ServerWorld)getWorld();
-		var inventory = getInventory().main;
-
-		for (var itemStack : inventory)
+		if (getWorld() instanceof ServerWorld serverWorld)
 		{
-			var enchantmentsComponent = EnchantmentHelper.getEnchantments(itemStack);
+			var inventory = getInventory().main;
 
-			for (var enchantmentEntry : enchantmentsComponent.getEnchantments())
+			EnchantmentUtil.iterateEnchantments(inventory, (itemStack, component,
+															enchantmentEntry, enchantment) ->
 			{
-				Enchantment enchantment = enchantmentEntry.value();
 				if (enchantmentEntry.isIn(ModTags.Enchantments.INVENTORY_TICKING_ENCHANTMENTS))
 				{
-					applyEnchantmentTickEffects(serverWorld, this, itemStack, enchantment,
-							enchantmentsComponent.getLevel(enchantmentEntry));
+					applyEnchantmentTickEffect(serverWorld, this, itemStack, enchantment,
+							component.getLevel(enchantmentEntry));
 				}
-			}
+			});
 		}
+
 	}
 
-	private static void applyEnchantmentTickEffects(ServerWorld serverWorld, LivingEntity entity,
-													ItemStack itemStack, Enchantment enchantment, int level)
+	private static void applyEnchantmentTickEffect(ServerWorld serverWorld, LivingEntity entity,
+												   ItemStack itemStack, Enchantment enchantment, int level)
 	{
 		var tickingEffects = enchantment.getEffect(EnchantmentEffectComponentTypes.TICK);
 		var context = new EnchantmentEffectContext(itemStack, null, entity);
 
-		for (var tickingEffect : tickingEffects)
-		{
-			tickingEffect.effect().apply(serverWorld, level, context, entity, entity.getPos());
-		}
+		tickingEffects.getFirst().effect().apply(serverWorld, level, context, entity, entity.getPos());
 	}
 }

@@ -19,6 +19,8 @@ public class ModEnchantments
             RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(KindaCursed.MOD_ID, "curse_of_slippery_hands"));
     public static final RegistryKey<Enchantment> CURSE_OF_HEAVY_BURDEN =
             RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(KindaCursed.MOD_ID, "curse_of_heavy_burden"));
+    public static final RegistryKey<Enchantment> CURSE_OF_DOOM =
+            RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(KindaCursed.MOD_ID, "curse_of_doom"));
 
     public static void bootstrap(Registerable<Enchantment> registerable)
     {
@@ -51,6 +53,15 @@ public class ModEnchantments
                         AttributeModifierSlot.ANY))
                 .addEffect(EnchantmentEffectComponentTypes.TICK,
                 new CurseOfHeavyBurdenEnchantmentEffect()));
+
+        register(registerable, CURSE_OF_DOOM, Enchantment.builder(Enchantment.definition(
+                        items.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),
+                        1,
+                        1,
+                        Enchantment.constantCost(25),
+                        Enchantment.constantCost(50),
+                        8,
+                        AttributeModifierSlot.ANY)));
     }
 
     private static void register(Registerable<Enchantment> registry, RegistryKey<Enchantment> key, Enchantment.Builder builder)

@@ -20,9 +20,6 @@
 		],
 		"fabric-datagen": [
 			"net.detrovv.kindacursed.KindaCursedDataGenerator"
-		],
-		"client": [
-			"net.detrovv.kindacursed.KindaCursedClient"
 		]
 	},
 	"mixins": [

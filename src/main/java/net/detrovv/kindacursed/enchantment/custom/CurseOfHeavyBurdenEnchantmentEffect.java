@@ -1,7 +1,6 @@
 package net.detrovv.kindacursed.enchantment.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.detrovv.kindacursed.KindaCursed;
 import net.detrovv.kindacursed.component.ModDataComponentTypes;
 import net.detrovv.kindacursed.mixin.ServerPlayerEntityFieldAccessor;
 import net.minecraft.enchantment.EnchantmentEffectContext;

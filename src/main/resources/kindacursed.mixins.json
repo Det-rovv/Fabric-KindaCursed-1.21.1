@@ -3,7 +3,6 @@
 	"package": "net.detrovv.kindacursed.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"InventoryEnchantmentTickMixin",
 		"LivingEntityDamageMixin",
 		"ServerPlayerEntityFieldAccessor"
 	],

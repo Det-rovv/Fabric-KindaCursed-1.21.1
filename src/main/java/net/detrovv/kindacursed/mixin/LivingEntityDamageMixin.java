@@ -1,9 +1,9 @@
 package net.detrovv.kindacursed.mixin;
 
 import com.mojang.authlib.GameProfile;
+import net.detrovv.active_enchantments_lib.util.EnchantmentUtil;
 import net.detrovv.kindacursed.enchantment.ModEnchantments;
 import net.detrovv.kindacursed.enchantment.custom.CurseOfDoomEnchantmentEffect;
-import net.detrovv.kindacursed.util.EnchantmentUtil;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;

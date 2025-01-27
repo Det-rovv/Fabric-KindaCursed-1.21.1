@@ -1,7 +1,7 @@
 package net.detrovv.kindacursed.datagen;
 
+import net.detrovv.active_enchantments_lib.util.ModTags;
 import net.detrovv.kindacursed.enchantment.ModEnchantments;
-import net.detrovv.kindacursed.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;

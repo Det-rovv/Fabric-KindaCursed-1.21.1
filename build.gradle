@@ -16,6 +16,13 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		url = uri("https://maven.pkg.github.com/det-rovv/Fabric-ActiveEnchantmentsLib-1.21.1")
+		credentials {
+			username = project.findProperty("gpr.user")
+			password = project.findProperty("gpr.key")
+		}
+	}
 }
 
 fabricApi {
@@ -31,7 +38,8 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+
+	modImplementation "net.detrovv.active_enchantments_lib:active_enchantments_lib:${project.active_enchantments_lib_version}"
 }
 
 processResources {

@@ -1,7 +1,7 @@
-package net.detrovv.kindacursed;
+package net.detrovv.kinda_cursed;
 
-import net.detrovv.kindacursed.datagen.*;
-import net.detrovv.kindacursed.enchantment.ModEnchantments;
+import net.detrovv.kinda_cursed.datagen.*;
+import net.detrovv.kinda_cursed.enchantment.ModEnchantments;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;

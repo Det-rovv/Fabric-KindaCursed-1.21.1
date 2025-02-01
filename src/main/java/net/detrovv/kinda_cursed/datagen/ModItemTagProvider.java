@@ -1,4 +1,4 @@
-package net.detrovv.kindacursed.datagen;
+package net.detrovv.kinda_cursed.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;

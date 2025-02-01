@@ -1,13 +1,13 @@
 {
   "anvil_cost": 8,
   "description": {
-    "translate": "enchantment.kindacursed.curse_of_heavy_burden"
+    "translate": "enchantment.kinda_cursed.curse_of_heavy_burden"
   },
   "effects": {
     "minecraft:tick": [
       {
         "effect": {
-          "type": "kindacursed:curse_of_heavy_burden"
+          "type": "kinda_cursed:curse_of_heavy_burden"
         }
       }
     ]
@@ -25,5 +25,5 @@
     "any"
   ],
   "supported_items": "#minecraft:enchantable/durability",
-  "weight": 1
+  "weight": 5
 }

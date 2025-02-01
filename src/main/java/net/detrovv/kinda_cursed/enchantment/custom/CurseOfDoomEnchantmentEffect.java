@@ -1,6 +1,7 @@
-package net.detrovv.kindacursed.enchantment.custom;
+package net.detrovv.kinda_cursed.enchantment.custom;
 
 import com.mojang.serialization.MapCodec;
+import net.detrovv.kinda_cursed.mixin.LivingEntityFieldAccessor;
 import net.minecraft.enchantment.EnchantmentEffectContext;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.entity.Entity;
@@ -27,7 +28,8 @@ public record CurseOfDoomEnchantmentEffect() implements EnchantmentEntityEffect
             float health = livingEntity.getHealth();
             if (health > 0 && health <= DEATH_HEALTH_LEVEL)
             {
-                livingEntity.kill();
+                var lastDamageSource = ((LivingEntityFieldAccessor)livingEntity).getLastDamageSource();
+                livingEntity.damage(lastDamageSource, Float.POSITIVE_INFINITY);
             }
         }
     }

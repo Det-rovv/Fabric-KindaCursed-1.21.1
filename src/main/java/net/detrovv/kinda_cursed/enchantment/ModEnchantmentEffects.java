@@ -1,10 +1,10 @@
-package net.detrovv.kindacursed.enchantment;
+package net.detrovv.kinda_cursed.enchantment;
 
 import com.mojang.serialization.MapCodec;
-import net.detrovv.kindacursed.KindaCursed;
-import net.detrovv.kindacursed.enchantment.custom.CurseOfDoomEnchantmentEffect;
-import net.detrovv.kindacursed.enchantment.custom.CurseOfHeavyBurdenEnchantmentEffect;
-import net.detrovv.kindacursed.enchantment.custom.CurseOfSlipperyHandsEnchantmentEffect;
+import net.detrovv.kinda_cursed.KindaCursed;
+import net.detrovv.kinda_cursed.enchantment.custom.CurseOfDoomEnchantmentEffect;
+import net.detrovv.kinda_cursed.enchantment.custom.CurseOfHeavyBurdenEnchantmentEffect;
+import net.detrovv.kinda_cursed.enchantment.custom.CurseOfSlipperyHandsEnchantmentEffect;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

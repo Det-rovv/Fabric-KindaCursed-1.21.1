@@ -1,4 +1,4 @@
-package net.detrovv.kindacursed.mixin;
+package net.detrovv.kinda_cursed.mixin;
 
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;

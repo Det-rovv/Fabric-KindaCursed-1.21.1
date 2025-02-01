@@ -1,7 +1,7 @@
 {
   "anvil_cost": 8,
   "description": {
-    "translate": "enchantment.kindacursed.curse_of_doom"
+    "translate": "enchantment.kinda_cursed.curse_of_doom"
   },
   "max_cost": {
     "base": 50,
@@ -16,5 +16,5 @@
     "any"
   ],
   "supported_items": "#minecraft:enchantable/durability",
-  "weight": 1
+  "weight": 5
 }

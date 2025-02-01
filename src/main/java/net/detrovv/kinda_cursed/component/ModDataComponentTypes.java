@@ -1,7 +1,7 @@
-package net.detrovv.kindacursed.component;
+package net.detrovv.kinda_cursed.component;
 
 import com.mojang.serialization.Codec;
-import net.detrovv.kindacursed.KindaCursed;
+import net.detrovv.kinda_cursed.KindaCursed;
 import net.minecraft.component.ComponentType;
 import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.registry.Registries;

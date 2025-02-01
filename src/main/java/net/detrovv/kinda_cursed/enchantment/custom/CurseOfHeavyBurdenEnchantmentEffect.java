@@ -1,8 +1,8 @@
-package net.detrovv.kindacursed.enchantment.custom;
+package net.detrovv.kinda_cursed.enchantment.custom;
 
 import com.mojang.serialization.MapCodec;
-import net.detrovv.kindacursed.component.ModDataComponentTypes;
-import net.detrovv.kindacursed.mixin.ServerPlayerEntityFieldAccessor;
+import net.detrovv.kinda_cursed.component.ModDataComponentTypes;
+import net.detrovv.kinda_cursed.mixin.ServerPlayerEntityFieldAccessor;
 import net.minecraft.enchantment.EnchantmentEffectContext;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.entity.Entity;

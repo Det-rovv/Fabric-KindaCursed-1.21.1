@@ -1,13 +1,13 @@
 {
   "anvil_cost": 8,
   "description": {
-    "translate": "enchantment.kindacursed.curse_of_slippery_hands"
+    "translate": "enchantment.kinda_cursed.curse_of_slippery_hands"
   },
   "effects": {
     "minecraft:hit_block": [
       {
         "effect": {
-          "type": "kindacursed:curse_of_slippery_hands"
+          "type": "kinda_cursed:curse_of_slippery_hands"
         }
       }
     ],
@@ -15,7 +15,7 @@
       {
         "affected": "attacker",
         "effect": {
-          "type": "kindacursed:curse_of_slippery_hands"
+          "type": "kinda_cursed:curse_of_slippery_hands"
         },
         "enchanted": "attacker"
       }
@@ -34,5 +34,5 @@
     "any"
   ],
   "supported_items": "#minecraft:enchantable/durability",
-  "weight": 1
+  "weight": 5
 }

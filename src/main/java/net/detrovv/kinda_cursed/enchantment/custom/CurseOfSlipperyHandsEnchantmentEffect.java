@@ -1,4 +1,4 @@
-package net.detrovv.kindacursed.enchantment.custom;
+package net.detrovv.kinda_cursed.enchantment.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.enchantment.EnchantmentEffectContext;

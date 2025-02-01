@@ -1,8 +1,8 @@
-package net.detrovv.kindacursed.enchantment;
+package net.detrovv.kinda_cursed.enchantment;
 
-import net.detrovv.kindacursed.KindaCursed;
-import net.detrovv.kindacursed.enchantment.custom.CurseOfHeavyBurdenEnchantmentEffect;
-import net.detrovv.kindacursed.enchantment.custom.CurseOfSlipperyHandsEnchantmentEffect;
+import net.detrovv.kinda_cursed.KindaCursed;
+import net.detrovv.kinda_cursed.enchantment.custom.CurseOfHeavyBurdenEnchantmentEffect;
+import net.detrovv.kinda_cursed.enchantment.custom.CurseOfSlipperyHandsEnchantmentEffect;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
@@ -30,7 +30,7 @@ public class ModEnchantments
         var curseOfSlipperyHandsEnchantmentEffect = new CurseOfSlipperyHandsEnchantmentEffect();
         register(registerable, CURSE_OF_SLIPPERY_HANDS, Enchantment.builder(Enchantment.definition(
                 items.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),
-                1,
+                5,
                 1,
                 Enchantment.constantCost(25),
                 Enchantment.constantCost(50),
@@ -45,7 +45,7 @@ public class ModEnchantments
 
         register(registerable, CURSE_OF_HEAVY_BURDEN, Enchantment.builder(Enchantment.definition(
                         items.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),
-                        1,
+                        5,
                         1,
                         Enchantment.constantCost(25),
                         Enchantment.constantCost(50),
@@ -56,7 +56,7 @@ public class ModEnchantments
 
         register(registerable, CURSE_OF_DOOM, Enchantment.builder(Enchantment.definition(
                         items.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),
-                        1,
+                        5,
                         1,
                         Enchantment.constantCost(25),
                         Enchantment.constantCost(50),

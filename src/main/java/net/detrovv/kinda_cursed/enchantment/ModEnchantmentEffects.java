@@ -2,6 +2,7 @@ package net.detrovv.kinda_cursed.enchantment;
 
 import com.mojang.serialization.MapCodec;
 import net.detrovv.kinda_cursed.KindaCursed;
+import net.detrovv.kinda_cursed.enchantment.custom.CurseOfDiscordEnchantmentEffect;
 import net.detrovv.kinda_cursed.enchantment.custom.CurseOfDoomEnchantmentEffect;
 import net.detrovv.kinda_cursed.enchantment.custom.CurseOfHeavyBurdenEnchantmentEffect;
 import net.detrovv.kinda_cursed.enchantment.custom.CurseOfSlipperyHandsEnchantmentEffect;
@@ -20,6 +21,9 @@ public class ModEnchantmentEffects
 
     public static final MapCodec<? extends EnchantmentEntityEffect> CURSE_OF_DOOM =
             registerEntityEffect("curse_of_doom", CurseOfDoomEnchantmentEffect.CODEC);
+
+    public static final MapCodec<? extends EnchantmentEntityEffect> CURSE_OF_DISCORD =
+            registerEntityEffect("curse_of_discord", CurseOfDiscordEnchantmentEffect.CODEC);
 
     private static MapCodec<? extends EnchantmentEntityEffect> registerEntityEffect(String name,
                                                                                     MapCodec<? extends EnchantmentEntityEffect> codec)

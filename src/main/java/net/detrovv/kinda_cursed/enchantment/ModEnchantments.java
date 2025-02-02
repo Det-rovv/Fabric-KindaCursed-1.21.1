@@ -1,6 +1,7 @@
 package net.detrovv.kinda_cursed.enchantment;
 
 import net.detrovv.kinda_cursed.KindaCursed;
+import net.detrovv.kinda_cursed.enchantment.custom.CurseOfDiscordEnchantmentEffect;
 import net.detrovv.kinda_cursed.enchantment.custom.CurseOfHeavyBurdenEnchantmentEffect;
 import net.detrovv.kinda_cursed.enchantment.custom.CurseOfSlipperyHandsEnchantmentEffect;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
@@ -21,6 +22,8 @@ public class ModEnchantments
             RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(KindaCursed.MOD_ID, "curse_of_heavy_burden"));
     public static final RegistryKey<Enchantment> CURSE_OF_DOOM =
             RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(KindaCursed.MOD_ID, "curse_of_doom"));
+    public static final RegistryKey<Enchantment> CURSE_OF_DISCORD =
+            RegistryKey.of(RegistryKeys.ENCHANTMENT, Identifier.of(KindaCursed.MOD_ID, "curse_of_discord"));
 
     public static void bootstrap(Registerable<Enchantment> registerable)
     {
@@ -53,6 +56,17 @@ public class ModEnchantments
                         AttributeModifierSlot.ANY))
                 .addEffect(EnchantmentEffectComponentTypes.TICK,
                 new CurseOfHeavyBurdenEnchantmentEffect()));
+
+        register(registerable, CURSE_OF_DISCORD, Enchantment.builder(Enchantment.definition(
+                        items.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),
+                        5,
+                        1,
+                        Enchantment.constantCost(25),
+                        Enchantment.constantCost(50),
+                        8,
+                        AttributeModifierSlot.ANY))
+                .addEffect(EnchantmentEffectComponentTypes.TICK,
+                        new CurseOfDiscordEnchantmentEffect()));
 
         register(registerable, CURSE_OF_DOOM, Enchantment.builder(Enchantment.definition(
                         items.getOrThrow(ItemTags.DURABILITY_ENCHANTABLE),

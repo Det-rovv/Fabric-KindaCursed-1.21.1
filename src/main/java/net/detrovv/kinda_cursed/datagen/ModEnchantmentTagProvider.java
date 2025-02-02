@@ -19,6 +19,7 @@ public class ModEnchantmentTagProvider extends FabricTagProvider.EnchantmentTagP
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup)
     {
         getOrCreateTagBuilder(ModTags.Enchantments.INVENTORY_TICKING_ENCHANTMENTS)
-                .add(ModEnchantments.CURSE_OF_HEAVY_BURDEN);
+                .add(ModEnchantments.CURSE_OF_HEAVY_BURDEN)
+                .add(ModEnchantments.CURSE_OF_DISCORD);
     }
 }

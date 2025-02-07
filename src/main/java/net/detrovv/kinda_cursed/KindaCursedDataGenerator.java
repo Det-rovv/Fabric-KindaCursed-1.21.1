@@ -14,7 +14,7 @@ public class KindaCursedDataGenerator implements DataGeneratorEntrypoint
 	{
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModDataComponentTagProvider::new);
 		pack.addProvider(ModEnchantmentTagProvider::new);
 		pack.addProvider(ModRegistryDataGenerator::new);
 	}

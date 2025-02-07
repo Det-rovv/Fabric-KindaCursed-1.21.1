@@ -53,7 +53,8 @@ public class ModEnchantments
                         Enchantment.constantCost(25),
                         Enchantment.constantCost(50),
                         8,
-                        AttributeModifierSlot.ANY))
+                        AttributeModifierSlot.ANY,
+                        AttributeModifierSlot.OFFHAND))
                 .addEffect(EnchantmentEffectComponentTypes.TICK,
                 new CurseOfHeavyBurdenEnchantmentEffect()));
 
@@ -64,7 +65,8 @@ public class ModEnchantments
                         Enchantment.constantCost(25),
                         Enchantment.constantCost(50),
                         8,
-                        AttributeModifierSlot.ANY))
+                        AttributeModifierSlot.ANY,
+                        AttributeModifierSlot.OFFHAND))
                 .addEffect(EnchantmentEffectComponentTypes.TICK,
                         new CurseOfDiscordEnchantmentEffect()));
 

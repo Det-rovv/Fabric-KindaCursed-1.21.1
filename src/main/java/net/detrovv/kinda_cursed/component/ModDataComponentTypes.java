@@ -3,10 +3,13 @@ package net.detrovv.kinda_cursed.component;
 import com.mojang.serialization.Codec;
 import net.detrovv.kinda_cursed.KindaCursed;
 import net.minecraft.component.ComponentType;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.network.codec.PacketCodecs;
+import net.minecraft.registry.Registerable;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.dynamic.Codecs;
 
 import java.util.function.UnaryOperator;
 
